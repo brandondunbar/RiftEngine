@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using RiftEngine.Frontend.Services;
+using RiftEngine.Frontend.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +26,7 @@ namespace RiftEngine.Frontend.Views
         public DashboardView()
         {
             InitializeComponent();
+            DataContext = ((App)Application.Current).ServiceProvider.GetRequiredService<DashboardViewModel>();
         }
     }
 }

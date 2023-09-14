@@ -9,6 +9,53 @@
       Title="GameConfigView">
 
     <Grid>
-        
+        <!-- Game Path Textbox and Browse Button -->
+        <Grid x:Name="GamePathGrid" Margin="10,200,10,206">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto" MinWidth="258"/>
+            </Grid.ColumnDefinitions>
+            <!-- <TextBox x:Name="GamePathTextBox" Text="{Binding GamePath, Mode=TwoWay}" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" TextChanged="TextBox_TextChanged" Margin="184,10,10,10" Tag="GamePathPlaceholder"/> -->
+            <TextBox x:Name="GamePathTextBox" Margin="184,10,10,10" Tag="GamePathPlaceholder"/>
+            <TextBlock x:Name="GamePathPlaceholder" Text="Game Path..." IsHitTestVisible="False" Foreground="Gray" Margin="195,14,260,12"/>
+            <Button x:Name="GamePathBrowseButton" Content="Browse" Grid.Column="1" Margin="10,10,148,10" Tag="GamePathTextBox"/>
+        </Grid>
+
+        <!-- Unpack Path Textbox and Browse Button -->
+        <Grid x:Name="UnpackGrid" Margin="10,238,10,168" RenderTransformOrigin="0.492,0.475">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto" MinWidth="258"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="UnpackPathTextBox" Text="{Binding UnpackPath}" Margin="184,10,10,10" Tag="UnpackPathPlaceholder"/>
+            <TextBlock x:Name="UnpackPathPlaceholder" Text="Unpack Path..." IsHitTestVisible="False" Foreground="Gray" Margin="194,14,255,14" RenderTransformOrigin="0.492,0.645"/>
+            <Button x:Name="UnpackPathBrowseButton" Content="Browse" Grid.Column="1" Margin="10,10,148,10" Tag="UnpackPathTextBox"/>
+        </Grid>
+
+        <!-- Logo -->
+        <Image x:Name="Logo" Source="pack://application:,,,/Assets/Images/RiftEngineSquareLogoSmallish.png" Width="75" Height="75" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+
+        <!-- Select Game Dropdown and Add Game Button -->
+        <Grid Margin="10,47,10,302">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="55*"/>
+                <RowDefinition Height="49*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto" MinWidth="260"/>
+            </Grid.ColumnDefinitions>
+            <!-- <ComboBox x:Name="GameDropdown" Text="{Binding SelectedGame}" Margin="182,44,10,33" local:ComboBoxExtensions.PlaceholderText="Select a game..." Grid.RowSpan="2">
+                <ComboBoxItem Content="Baldur's Gate 3"/>
+                <ComboBoxItem Content="Game 2"/>
+            </ComboBox> -->
+            <Button x:Name="AddGameButton" Content="Add Game" Grid.Column="1" Margin="10,44,150,33" Grid.RowSpan="2"/>
+        </Grid>
+
+        <!-- Status Text -->
+        <TextBlock x:Name="StatusText" Text="{Binding StatusMessage}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,400,0,0"/>
+        <TextBlock x:Name="ServerStatusText" Text="{Binding ServerStatus}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,153,0,0"/>
+        <!-- Unpack Button -->
+        <Button x:Name="SelectFilesButton" Content="Select Files" Width="150" Height="51" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,344,0,0"/>
     </Grid>
 </Page>

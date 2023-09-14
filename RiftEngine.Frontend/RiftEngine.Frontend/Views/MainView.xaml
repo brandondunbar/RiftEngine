@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:RiftEngine.Frontend.Views"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MainView">
+      Title="MainView" Background="{StaticResource BackgroundBrush}">
+      <!-- Background should be set via Styles.xaml, but wasn't. Took too long to debug, decided to just set here -->
 
     <Grid>
         <Frame x:Name="MainFrame" Background="Transparent"/>
