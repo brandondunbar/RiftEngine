@@ -25,6 +25,7 @@ namespace RiftEngine.Frontend.Views
         {
             InitializeComponent();
             navigationService.Initialize(MainFrame);
+            // MainFrame.ShowsNavigationUI = false;
         }
     }
 }

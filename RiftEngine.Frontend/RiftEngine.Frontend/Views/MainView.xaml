@@ -10,6 +10,6 @@
       <!-- Background should be set via Styles.xaml, but wasn't. Took too long to debug, decided to just set here -->
 
     <Grid>
-        <Frame x:Name="MainFrame" Background="Transparent"/>
+        <Frame x:Name="MainFrame" Background="Transparent" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Page>
