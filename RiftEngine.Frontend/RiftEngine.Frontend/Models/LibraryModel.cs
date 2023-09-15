@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace RiftEngine.Frontend.Models
 {
-    public class GameModel
+    public class LibraryModel
     {
         public string Name { get; set; }
-        public string InstallPath { get; set; }
-        public string UnpackToPath { get; set; }
-        public string LibraryName { get; set; }
+        public string Version { get; set; }
+        public List<string> SupportedGames { get; set; }  // List of game names or IDs
     }
 }

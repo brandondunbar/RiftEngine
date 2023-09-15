@@ -10,23 +10,21 @@
 
     <Grid>
         <!-- Logo -->
-        <Image x:Name="Logo" Source="pack://application:,,,/Assets/Images/RiftEngineSquareLogoSmallish.png" Width="75" Height="75" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-
-        <!-- Game Selection Dropdown and Controls -->
-        <ComboBox HorizontalAlignment="Center" Margin="0,67,0,0" VerticalAlignment="Top" Width="292">
-            <ComboBoxItem Content="Baldur's Gate 3"/>
-        </ComboBox>
-        <Button Content="Get Library" HorizontalAlignment="Center" Margin="0,98,0,0" VerticalAlignment="Top" Width="80" Height="30"/>
+        <Image Source="pack://application:,,,/Assets/Images/RiftEngineSquareLogoSmallish.png" Width="77" Height="77" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" />
+        
+        <!-- Game Selection -->
+        <ComboBox HorizontalAlignment="Center" Margin="0,69,0,0" VerticalAlignment="Top" Width="300" ItemsSource="{Binding AvailableGames}"/>
+        <Button Content="Add Game" HorizontalAlignment="Center" Margin="0,113,0,0" VerticalAlignment="Top" Height="31" Width="67"/>
 
         <!-- Game Path -->
-        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Game Path..." VerticalAlignment="Top" Width="292" Height="22" Margin="0,168,0,0"/>
-        <Button Content="Browse" HorizontalAlignment="Left" Margin="566,168,0,0" VerticalAlignment="Top" Height="22" Width="59" />
+        <TextBox HorizontalAlignment="Center" Margin="0,201,0,0" TextWrapping="Wrap" Text="Game Path..." VerticalAlignment="Top" Width="300" Height="24"/>
+        <Button Content="Browse" HorizontalAlignment="Left" Margin="570,201,0,0" VerticalAlignment="Top" Height="24" Width="50"/>
 
         <!-- Unpack Path -->
-        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Unpack Path..." VerticalAlignment="Top" Width="292" Height="22" Margin="0,225,0,0"/>
-        <Button Content="Browse" HorizontalAlignment="Left" Margin="566,225,0,0" VerticalAlignment="Top" Height="22" Width="59" />
-
-        <!-- Select Files Button-->
-        <Button x:Name="SelectFilesButton" Content="Select Files" Width="150" Height="51" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,344,0,0"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,252,0,0" TextWrapping="Wrap" Text="Unpack Path..." VerticalAlignment="Top" Width="300" Height="24"/>
+        <Button Content="Browse" HorizontalAlignment="Left" Margin="570,252,0,0" VerticalAlignment="Top" Height="24" Width="50"/>
+        
+        <!-- Select Files Button -->
+        <Button Content="Select Files" HorizontalAlignment="Center" Margin="0,360,0,0" VerticalAlignment="Top" Height="35" Width="100" Command="{Binding SelectFilesCommand}"/>
     </Grid>
 </Page>

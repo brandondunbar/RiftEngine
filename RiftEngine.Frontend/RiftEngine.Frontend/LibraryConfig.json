@@ -1,0 +1,10 @@
+[
+  {
+    "LibraryName": "LSLib",
+    "SupportedGames": [ "Divinity: Original Sin", "Divinity: Original Sin 2", "Baldur's Gate 3" ]
+  },
+  {
+    "LibraryName": "AnotherLib",
+    "SupportedGames": [ "Game1", "Game2" ]
+  }
+]
