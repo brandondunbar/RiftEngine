@@ -35,7 +35,10 @@ namespace RiftEngine.Frontend.ViewModels
             SelectFilesCommand = new RelayCommand(SelectFilesButton_Clicked);
             AvailableGames = new ObservableCollection<string>();
             _gameConfig = gameConfig;
-            _gameConfig.AddedGames = new List<GameModel>();
+            if(_gameConfig.AddedGames == null)
+            {
+                _gameConfig.AddedGames = new List<GameModel>();
+            }
             LoadLibraryConfig();
         }
 
@@ -113,6 +116,8 @@ namespace RiftEngine.Frontend.ViewModels
             else
             {
                 // TODO: Handle the case where no matching game model is found
+                this.InstallPath = "";
+                this.UnpackToPath = "";
             }
         }
 
