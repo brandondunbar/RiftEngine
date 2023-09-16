@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using Newtonsoft.Json;
+using RiftEngine.Frontend.Common;
 using RiftEngine.Frontend.DataModels;
 using RiftEngine.Frontend.Models;
 using System;
@@ -24,8 +25,8 @@ namespace RiftEngine.Frontend.ViewModels
         private readonly GameConfig _gameConfig;
         public ObservableCollection<string> AvailableGames { get; set; }
         // Config file attributes
-        private readonly string LIBRARY_CONFIG_PATH = "LibraryConfig.json";
-        private readonly string GAME_CONFIG_PATH = "GameConfig.json";
+        private readonly string LIBRARY_CONFIG_PATH = Constants.LibraryConfigPath;
+        private readonly string GAME_CONFIG_PATH = Constants.GameConfigPath;
         // Front end binding attributes
         public event PropertyChangedEventHandler PropertyChanged;
 
